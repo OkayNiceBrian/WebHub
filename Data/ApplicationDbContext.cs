@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using WebHub.Models;
 
 namespace WebHub.Data
 {
@@ -9,5 +10,6 @@ namespace WebHub.Data
             : base(options)
         {
         }
+        public DbSet<WebHub.Models.BlogPost>? BlogPost { get; set; }
     }
 }
