@@ -10,6 +10,8 @@
 
         public DateTime CreatedDate { get; set; }
 
+        public string? UserEmail { get; set; }
+
         public BlogPost()
         {
 

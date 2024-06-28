@@ -1,8 +1,15 @@
-﻿@{
+﻿@model WebHub.Models.BlogPost
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">WebHub Blog Posts</h1>
-    <p></p>
+    <div style="margin-top:25px"></div>
+    <h1 class="display-6">Latest Post</h1>
+    <div style="margin-top:25px"></div>
+    <h4>@Html.DisplayFor(item => item.Title)</h4>
+    <p>@Html.DisplayFor(item => item.Content)</p>
+    <p>Written By @Html.DisplayFor(item => item.UserEmail)</p>
 </div>

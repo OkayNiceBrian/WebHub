@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<WebHub.Models.BlogPost>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Blog Posts";
 }
 
-<h1>Index</h1>
+<h1>Blog Posts</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -14,6 +14,9 @@
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                Written By
             </th>
             <th>
                 Date Published
@@ -28,11 +31,10 @@
                 <a asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Title)</a>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
+                @Html.DisplayFor(modelItem => item.UserEmail)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
             </td>
         </tr>
     }
